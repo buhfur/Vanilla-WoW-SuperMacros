@@ -1,14 +1,15 @@
 ## Spammable Drain Mana
-```
-/script if not CastingBarFrame.channeling then CastSpellByName("Drain Mana") end
-```
 
 **Add in extended lua**
 ```lua
-
+function DrainMana() 
+    if CleveRoids.CheckCondition("checkchanneled:Drain Mana") then 
+        CleveRoids.DoCast("Drain Mana")
+        return
+    end
+end
 
 ```
-
 **call from macro**
 
 ```lua
