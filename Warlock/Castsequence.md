@@ -13,7 +13,7 @@ Should be more spam friendly
 
 For the Drain Soul function , please see the below 
 
-[SoulDrain function](DrainSoul.md)
+[SoulDrain function](Drain Soul.md#Drain-Soul-with-life-tap-and-drain-life)
 
 **Add in extended lua**
 ```lua
