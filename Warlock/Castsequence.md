@@ -15,6 +15,7 @@ For the Drain Soul function , please see the below
 
 [SoulDrain function](DrainSoul.md)
 
+**Add in extended lua**
 ```lua
 
 function SpellRotation()
@@ -41,6 +42,12 @@ function SpellRotation()
 
 end
 ```
+
+**Call in macro**
+```lua
+/script SpellRotation()
+```
+
 ## Castsequence Siphon Life, CoA, Corruption, Immolate
 ```
 /run local _gspells = { "Siphon Life", "Curse of Agony", "Corruption", "Immolate"} if GetSpellCooldown(4,"BOOKTYPE_SPELL")==0 then _gi=_gi and _gi > 0 and _gi or 1 CastSpellByName(_gspells[_gi]) _gi = math.mod(1+_gi, 1+table.getn(_gspells))end
