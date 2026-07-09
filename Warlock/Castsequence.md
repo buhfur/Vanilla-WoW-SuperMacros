@@ -1,13 +1,3 @@
-## Siphon Life, CoA, Corruption
-```
-/run s={"Curse of Shadow","Corruption", "Siphon Life"} if not q then q=1 end CastSpellByName(s[q]) q=q+1 if q>table.getn(s) then q=1 end
-```
-
-This macro will do a castsequence and recast the last in the event it's resisted. Due to limitations I had to forgo the castsequence functionality due to conditional state tracking ( and my own laziness to write around it ) 
-
-
-Should be more spam friendly 
-
 
 # Castsequence, drain soul if all dots are up
 
