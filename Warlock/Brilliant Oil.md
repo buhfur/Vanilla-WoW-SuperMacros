@@ -1,10 +1,28 @@
 ## Enchant Brilliant Mana Oil on weapon
-```
-/run for b=0,4 do for s=1,18 do local i=GetContainerItemLink if not(i(b,s)==nil)then if strfind(i(b,s), "Brilliant Mana Oil")then  UseContainerItem(b,s)PickupInventoryItem(16)ReplaceEnchant()ClearCursor()end end end end
+
+**Extended** 
+```lua
+function ApplyBoil()
+    CleveRoids.DoUse("Brilliant Mana Oil")
+    PickupInventoryItem(16)
+end
+    
 ```
 
-
+```lua
+/script ApplyBoil()
+```
 ## Enchant Brilliant Wizard Oil on weapon
+
+```lua
+function ApplyWoil()
+    CleveRoids.DoUse("Brilliant Wizard Oil")
+    PickupInventoryItem(16)
+end
+    
 ```
-/run for b=0,4 do for s=1,18 do local i=GetContainerItemLink if not(i(b,s)==nil)then if strfind(i(b,s), "Brilliant Wizard Oil")then  UseContainerItem(b,s)PickupInventoryItem(16)ReplaceEnchant()end end end end
+
+
+```lua
+/script ApplyWoil()
 ```

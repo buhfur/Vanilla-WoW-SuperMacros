@@ -1,11 +1,23 @@
 ## Death Coil + Fear
-uses getspellcooldown to track if Death Coil is ready
-```
-/run local c,s=CastSpellByName,"Death Coil";local i=nil;for j=1,180 do local n=GetSpellName(j,BOOKTYPE_SPELL);if n and strfind(n,s) then i=j;break;end end if i then if GetSpellCooldown(i,BOOKTYPE_SPELL)<1 then c(s)else c("Fear")end end
+
+Macro will cast death coil if off CD , then cast fear. Else , just cast fear. 
+
+**Add in extended lua** 
+```lua
+function dc() 
+   if CleveRoids.CheckCondition("usable:Death Coil") then 
+       CleveRoids.DoCast("Death Coil")
+       CleveRoids.DoCast("Fear")
+       return 
+
+    else
+       CleveRoids.DoCast("Fear")
+    end
+end
 ```
 
+**In macro** 
+```lua
+/script dc()
+```
 
-Death Coil + Fear
-```
-/run if GetSpellCooldown(135,"spell")<1 then CastSpellByName("Death Coil") else CastSpellByName("Fear") end
-```

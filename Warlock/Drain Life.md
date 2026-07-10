@@ -1,10 +1,14 @@
 ## Spammable Drain Life
-```
-/run local i,x=1,0 while UnitDebuff("target",i) do if UnitDebuff("target",i)=="Interface\\Icons\\Spell_Shadow_LifeDrain02" then x=1 end i=i+1 end if x==0 then CastSpellByName("Drain Life")end
-```
  
-
-## Spammable Drain Life
+```lua
+function LifeDrain() 
+    if CleveRoids.CheckCondition("checkchanneled:Drain Life") then 
+        CleveRoids.DoCast("Drain Life")
+        return
+    end
+end
 ```
-/script if not CastingBarFrame.channeling then CastSpellByName("Drain Life") end
+
+```lua
+/script LifeDrain() 
 ```
