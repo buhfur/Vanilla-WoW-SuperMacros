@@ -1,10 +1,16 @@
 ## Spammable Hellfire
+
+```lua
+function SpamHellfire() 
+    if CleveRoids.CheckCondition("checkchanneled:Hellfire") then 
+        CleveRoids.DoCast("Hellfire")
+        return
+    end
+end
 ```
-/script if not CastingBarFrame.channeling then CastSpellByName("Hellfire") end
+
+```lua
+/script SpamHellfire() 
 ```
  
 
-## Spammable Rain of Fire
-```
-/run if not SpellIsTargeting() and not CastingBarFrame.channeling then CastSpellByName("Rain of Fire")end
-```
