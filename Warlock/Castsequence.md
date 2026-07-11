@@ -3,39 +3,13 @@
 
 For the Drain Soul function , please see the below 
 
-[SoulDrain function](Drain Soul.md#Drain-Soul-with-life-tap-and-drain-life)
-
-**Add in extended lua**
-```lua
-
-function SpellRotation()
-
-    if CleveRoids.CheckCondition("nodebuff:Curse of Shadow,nodebuff:Curse of Agony") then
-        CleveRoids.DoCast("Curse of Shadow")
-        return 
-    end
-
-    if CleveRoids.CheckCondition("nodebuff:Corruption") then
-        CleveRoids.DoCast("Corruption")
-        return
-    end
-
-    if CleveRoids.CheckCondition("nodebuff:Siphon Life") then 
-        CleveRoids.DoCast("Siphon Life")
-        return 
-    end
-    
-    if CleveRoids.CheckCondition("debuff:Curse of Shadow,debuff:Curse of Agony,debuff:Corruption,debuff:Siphon Life") then
-        SoulDrain()
-        return
-    end
-
-end
-```
 
 **Call in macro**
 ```lua
-/script SpellRotation()
+/cast [nodebuff:Curse_of_Shadow/Curse_of_Agony] Curse of Shadow
+/cast [nodebuff:Corruption] Corruption
+/cast [nodebuff:Siphon_Life] Siphon Life
+/run SoulDrain()
 ```
 
 ## Castsequence Siphon Life, CoA, Corruption, Immolate
