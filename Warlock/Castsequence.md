@@ -1,15 +1,22 @@
 
 # Castsequence, drain soul if all dots are up
 
-For the Drain Soul function , please see the below 
-
+Does all dots , once all dots are up , runs soul drain
+Once health is below 10% , use drain life 
 
 **Call in macro**
 ```lua
+/petattack
 /cast [nodebuff:Curse_of_Shadow/Curse_of_Agony] Curse of Shadow
 /cast [nodebuff:Corruption] Corruption
 /cast [nodebuff:Siphon_Life] Siphon Life
-/run SoulDrain()
+
+/stopcasting [mypower:<10]
+
+/cast [mypower:<10,myhp:>20] Life Tap
+/cast [mypower:<10,myhp:<20,usable:Drain_Life] Drain Life
+
+/cast [mypower:>=10,checkchanneled:Drain_Soul&Siphon_Life&Curse_of_Shadow&Curse_of_Agony&Corruption] Drain Soul
 ```
 
 ## Castsequence Siphon Life, CoA, Corruption, Immolate
