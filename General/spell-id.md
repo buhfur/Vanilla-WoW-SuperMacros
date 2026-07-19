@@ -5,6 +5,8 @@
 
 Put in extended lua 
 
+Afterwards , save and do `/reload` then `/spelldump`
+
 ```lua
 SLASH_SPELLDUMP1="/spelldump"
 SlashCmdList["SPELLDUMP"]=function()
